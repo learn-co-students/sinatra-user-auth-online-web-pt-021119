@@ -1,15 +1,11 @@
 
-class User < ActiveRecord::Migration[5.0]
+class CreateUserTable < ActiveRecord::Migration[4.2]
 
-  def up
+  def change
     create_table :users do |t|
       t.string :name
       t.string :email
       t.string :password
     end
-  end
-
-  def down
-    drop_table :user
   end
 end
